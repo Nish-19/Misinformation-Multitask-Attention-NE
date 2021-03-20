@@ -1,4 +1,4 @@
-# Misinformation_Multitask_NES
+# Misinformation_Multitask_NE_Attn
 Code for the paper **"Misinformation detection using multi-task learning with mutual learning for novelty detection and emotion recognition"**
 
 Rina Kumari*, Nischal A\*, Tirthankar Ghoshal, Asif Ekbal
@@ -10,7 +10,7 @@ To replicate the results please follow the following instructions.
 
 ## Generating Novelty Results
 
-Place the glove-300d embeddings from the resources folder of the main directory to novelty_module/resources
+Download the Glove-300 embeddings from https://nlp.stanford.edu/projects/glove/ and place it in the resources folder of the main directory and novelty_module/resources.
 
 ### Preprocessing -
 Run python preprocess_bytedance.py
@@ -34,9 +34,12 @@ python novelty_module/train.py novelty_module/configs/main_quora_new.json5
 2) Generating the novelty aware embeddings using trained model (separately from train and test data)
 python novelty_module/evaluate.py novelty_module/models/quora_fnc_4ag_5dg/benchmark/best.pt novelty_module/data/fnc_quora/train_fnc_processed.txt
 
-### Combining novelty results to get best results on FNC
+Please follow similar procedure for the other datasets.
+
+### Combining novelty results to get best results on FNC and FNID
 1) Make sure the paths in the file are right
 python novelty_module/novelty_fnc_results_combine.py
+python novelty_module/novelty_fnid_results_combine.py
 
 ## Generating Emotion Results
 Download the pre-trained BERT model from
@@ -57,6 +60,8 @@ python bert_classifier_klinger.py
 - FNC dataset
 Have to change the path in the code corresponding to the premise, hypothesis files of the train and test datasets (train_ag_dg_hyp_fnc.csv and test_ag_dg_hyp_fnc.csv)
 python bert_classifier_klinger.py
+
+Please follow the same procedure for the other datasets.
 
 2) Training the model with Goemotion dataset
 Please run the notebook goemotion_lstm.ipynb in the lstm_goemtions folder with the appropriate dataset input.
