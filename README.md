@@ -1,7 +1,7 @@
 # Misinformation_Multitask_NE_Attn
 Code for the paper **"Misinformation detection using multi-task learning with mutual learning for novelty detection and emotion recognition"**
 
-Rina Kumari*, Nischal A\*, Tirthankar Ghoshal, Asif Ekbal
+Rina Kumari*, Nischal Ashok\*, Tirthankar Ghoshal, Asif Ekbal
 
 \* denotes equal contribution
 
