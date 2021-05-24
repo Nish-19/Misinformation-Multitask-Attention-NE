@@ -5,6 +5,9 @@ Rina Kumari*, Nischal Ashok\*, Tirthankar Ghoshal, Asif Ekbal
 
 \* denotes equal contribution
 
+![ipm_multitask_model](https://user-images.githubusercontent.com/41947720/119385587-f17c8600-bce3-11eb-99e6-9a097deb3c1d.jpg)
+
+(Above) The schematic representation of the final architecture (Proposed Model). 
 
 To replicate the results please follow the following instructions.
 
